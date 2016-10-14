@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="red-translucent" />
+        <meta name="apple-mobile-web-app-title" content="" /> 
+        <meta content="telephone=no" name="format-detection" />
+        <meta content="email=no" name="format-detection" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <title>SlsModal-jQuery弹框插件的简单使用-自定义css</title>
+        <link rel="stylesheet" href="http://cdn.sailengsi.com/other/bs/3.3.5/css/bootstrap.min.css"/>
+        <script src='http://cdn.sailengsi.com/js/jquery/2.1.4/jquery.min.js'></script>
+        <script src='../src/js/jquery.sls-modal.js'></script>
+        <style>
+           
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="well bg-info">
+                        <p><strong>
+                            插件暴露了12个元素可自定义css，具体请看下面demo。
+                            <pre>
+css:{
+    //背景遮罩
+    bg: {},
+
+    //显示框容器
+    content: {},
+
+    //显示框头部
+    header: {},
+
+    //显示框头部上的关闭×号
+    close: {},
+
+    //显示框body内容
+    body: {},
+
+    //显示框底部内容
+    footer: {},
+    
+    //所有按钮公用
+    btn: {},
+    
+    //信息状态
+    'btn-info': {},
+    
+    //警告状态
+    'btn-warning': {},
+    
+    //危险状态
+    'btn-danger': {},
+    
+    //成功状态
+    'btn-success': {}
+}
+                            </pre>
+                        </strong></p>
+                        <p>设置规则遵循javascript设置css规则，只要你会用javascript设置css，你就等于已经会了。</p>
+                    </div>
+                    
+                    <!-- 设置遮罩 -->
+                    <div class="well bg-info">
+                        <div class="btn btn-default modal-bg-css">设置遮罩背景被红色，透明度为.5。</div>
+                        <p>默认遮罩背景为黑色，透明度0.6</p>
+                        <p><strong></strong></p>
+                    </div>
+                    <script>
+                        $('.modal-bg-css').click(function(event) {
+                            SlsModal.init({
+                                css:{
+                                    bg:{
+                                        backgroundColor:'red',
+                                        opacity:'.5'
+                                    }
+                                }
+                            }).show();
+                        });
+                    </script>
+        
+                    
+                    <!-- 设置内容框背景为红色 -->
+                    <div class="well bg-info">
+                        <div class="btn btn-default modal-content-css">设置内容框背景为红色</div>
+                    </div>
+                    <script>
+                        $('.modal-content-css').click(function(event) {
+                            SlsModal.init({
+                                css:{
+                                    content:{
+                                        backgroundColor:'red'
+                                    }
+                                }
+                            }).show();
+                        });
+                    </script>
+
+
+
+                    <!-- 设置内容框的头部背景为红色，字体为白色 -->
+                    <div class="well bg-info">
+                        <div class="btn btn-default modal-header-css">设置内容框的头部背景为红色，字体为白色</div>
+                    </div>
+                    <script>
+                        $('.modal-header-css').click(function(event) {
+                            SlsModal.init({
+                                css:{
+                                    header:{
+                                        backgroundColor:'red',
+                                        color:'#FFF'
+                                    }
+                                }
+                            }).show();
+                        });
+                    </script>
+
+
+
+                    <!-- 设置内容框的底部背景为红色 -->
+                    <div class="well bg-info">
+                        <div class="btn btn-default modal-footer-css">设置内容框的底部背景为红色</div>
+                    </div>
+                    <script>
+                        $('.modal-footer-css').click(function(event) {
+                            SlsModal.init({
+                                css:{
+                                    footer:{
+                                        backgroundColor:'red'
+                                    }
+                                }
+                            }).show();
+                        });
+                    </script>
+
+
+                    <!-- 设置内容框的内容部分背景为红色，字体为白色 -->
+                    <div class="well bg-info">
+                        <div class="btn btn-default modal-content-body-css">设置内容框的内容部分背景为红色，字体为白色</div>
+                    </div>
+                    <script>
+                        $('.modal-content-body-css').click(function(event) {
+                            SlsModal.init({
+                                css:{
+                                    body:{
+                                        backgroundColor:'red',
+                                        color:'#FFF'
+                                    }
+                                }
+                            }).show();
+                        });
+                    </script>
+
+
+                    <!-- 设置框的右上角x号样式 -->
+                    <div class="well bg-info">
+                        <div class="btn btn-default modal-close-css">设置框的右上角x号样式</div>
+                    </div>
+                    <script>
+                        $('.modal-close-css').click(function(event) {
+                            SlsModal.init({
+                                css:{
+                                    close:{
+                                        backgroundColor:'red',
+                                        color:'#FFF',
+                                        fontSize:'32px'
+                                    }
+                                }
+                            }).show();
+                        });
+                    </script>
+
+                    <!-- 设置按钮公用样式 -->
+                    <div class="well bg-info">
+                        <div class="btn btn-default modal-btn-css">设置按钮公用样式</div>
+                    </div>
+                    <script>
+                        $('.modal-btn-css').click(function(event) {
+                            SlsModal.init({
+                                css:{
+                                    btn:{
+                                        padding:'2px 4px',
+                                        marginRight:'30px'
+                                    }
+                                }
+                            }).show();
+                        });
+                    </script>
+
+
+                    <!-- 按钮btn-info样式 -->
+                    <div class="well bg-info">
+                        <div class="btn btn-default modal-btn-info-css">按钮btn-info样式</div>
+                        <p><strong>
+                            注意：像btn-info,btn-warning,btn-danger,btn-success等设置时，需要key加引号，你懂得！！！
+                        </strong></p>
+                        <p><strong>
+                            另外：设置以上各种状态的样式时，请务必确保你使用了这种状态，否则不会生效，请看下个例子说明。
+                        </strong></p>
+                    </div>
+                    <script>
+                        $('.modal-btn-info-css').click(function(event) {
+                            SlsModal.init({
+                                css:{
+                                    'btn-info':{
+                                        padding:'2px 4px',
+                                        marginRight:'30px'
+                                    }
+                                }
+                            }).show();
+                        });
+                    </script>
+
+
+                    <!-- 按钮btn-danger样式 -->
+                    <div class="well bg-info">
+                        <div class="btn btn-default modal-btn-danger-css">按钮btn-danger样式 </div>
+                    </div>
+                    <script>
+                        $('.modal-btn-danger-css').click(function(event) {
+                            SlsModal.init({
+                                css:{
+                                    'btn-danger':{
+                                        fontSize:'22px'
+                                    }//设置了删除按钮样式，一定要确保在btns数组中声明了删除按钮，否则无效。
+                                },
+                                btns:[{
+                                    text:'返回',
+                                },{
+                                    text:'删除',
+                                    type:'danger'
+                                }]
+                            }).show();
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
