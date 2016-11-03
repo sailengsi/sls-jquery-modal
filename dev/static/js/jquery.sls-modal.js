@@ -1,8 +1,8 @@
 (function(field, factory, context) {
     if (typeof exports === 'object') {
-        module.exports = factory(require('jQuery'));
+        module.exports = factory(require('jquery'));
     } else if (typeof define === 'function' && define.amd) {
-        define(['jQuery'], factory);
+        define(['jquery'], factory);
     } else {
         context[field] = factory(context.jQuery);
     }
