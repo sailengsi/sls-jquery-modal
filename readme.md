@@ -2,8 +2,6 @@
 
 查看在线文档：[https://doc.sailengsi.com/sls-jquery-modal-doc/](https://doc.sailengsi.com/sls-jquery-modal-doc/ "查看在线文档")
 
-插件采用UMD模式编写，所以同时也兼容cmd,amd模式。
-
 项目采用fis编写，fis官网地址：[http://fis.baidu.com/](http://fis.baidu.com/ "fis文档")   
 所以你需要按照以下步骤才能运行此项目
 
@@ -22,8 +20,5 @@
 	
 	//启动Server
 	npm start
-	
-	//停止Server
-	npm stop
 
 注意：npm run build时，会在项目根目录(sls-jquery-modal)中创建release目录，此目录是把dev目录编译之后而生成，而npm start启动的服务，实际上是访问的release目录。
