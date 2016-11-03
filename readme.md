@@ -1,4 +1,5 @@
 查看在线demo：[https://demo.sailengsi.com/sls-jquery-modal/release/](https://demo.sailengsi.com/sls-jquery-modal/release/ "在线演示")
+查看在线文档：[https://doc.sailengsi.com/sls-jquery-modal-doc/](https://doc.sailengsi.com/sls-jquery-modal-doc/ "查看在线文档")
 
 插件采用UMD模式编写，所以同时也兼容cmd,amd模式。
 
