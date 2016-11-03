@@ -1,5 +1,7 @@
 查看在线demo：[https://demo.sailengsi.com/sls-jquery-modal/release/](https://demo.sailengsi.com/sls-jquery-modal/release/ "在线演示")
 
+插件采用UMD模式编写，所以同时也兼容cmd,amd模式。
+
 项目采用fis编写，fis官网地址：[http://fis.baidu.com/](http://fis.baidu.com/ "fis文档")   
 所以你需要按照以下步骤才能运行此项目
 
