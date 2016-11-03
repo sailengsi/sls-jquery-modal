@@ -1,17 +1,16 @@
 (function(field, factory, context) {
     if (typeof exports === 'object') {
-        module.exports = factory();
+        module.exports = factory(require('jQuery'));
     } else if (typeof define === 'function' && define.amd) {
-        define(factory);
+        define(['jQuery'], factory);
     } else {
-        context[field] = factory();
+        context[field] = factory(context.jQuery);
     }
-})("SlsModal", function() {
+})("SlsModal", function($) {
 
-    //检测是否引入jquery或者zepto
-    var $ = window["jQuery"] || window["Zepto"] || null;
+    //检测是否引入jquery
     if (!$) {
-        console.error("请引入jQuery或Zepto");
+        console.error("请引入jQuery");
         return;
     }
 
