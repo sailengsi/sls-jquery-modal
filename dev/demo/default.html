@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <link rel='import' href='../components/includes/header.html?__inline'>   
+        <title>SlsModal-jQuery弹框插件的简单使用</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="btn btn-default btn-modal">默认调用</div>
+                    <div class="well bg-info">
+                        <p>这是默认调用，不传任何参数的情况。</p>
+                        <p>点击右上角x号和点击背景以及点击下面两个按钮都会关闭</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <link rel='import' href='../components/includes/footer.html?__inline'>
+        <script>
+            $('.btn-modal').click(function(event) {
+                SlsModal.init().show();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <link rel='import' href='../components/includes/header.html?__inline'>
+        <link rel='import' href='../components/includes/footer.html?__inline'>
+        <title>SlsModal-jQuery弹框插件的简单使用-禁止自动关闭</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- 禁止自动关闭 -->
+                    <div class="btn btn-default disabled-auto-close">禁止自动关闭</div>
+                    <div class="well bg-info">
+                        <p>通过传入<strong>isAutoClose:false</strong> 禁止自动关闭</p>
+                        <p><strong>这个示例，只能通过点击右上角x号关闭</strong></p>
+                    </div>
+                    <script>
+                        var disabledAutoClose=$('.disabled-auto-close').click(function(event) {
+                            SlsModal.init({
+                                isAutoClose:false,
+                                body:'这个框，你只能通过点击右上角x号关闭了，只能手工绑定关闭事件。'
+                            }).show();
+
+                            //手工点击右上角关闭
+                            $("body").on('click','.sls-modal-close',function(){
+                                SlsModal.close();
+                            });
+                        });
+                        // disabledAutoClose.trigger('click');
+                    </script>
+
+
+                    <!-- 禁止点击右上角x自动关闭 -->
+                    <div class="btn btn-default disabled-close-btn">禁止点击右上角x自动关闭</div>
+                    <div class="well bg-info">
+                        <p>通过传入<strong>isClickClose:false</strong> 禁止点击右上角x自动关闭</p>
+                        <p><strong>这个示例，只能通过onClickClose回调手工关闭</strong></p>
+                    </div>
+                    <script>
+                        var disabledCloseBtn=$('.disabled-close-btn').click(function(event) {
+                            SlsModal.init({
+                                isClickClose:false,
+                                body:'这个框，你点击右上角x号不会自动关闭了，只能手工在onClickClose回调中手工关闭。',
+                                onClickClose:function(el){
+                                    console.log('点击右上角x号关闭前');
+                                    //关闭，你可以在这前后处理你的逻辑
+                                    this.close();
+                                    console.log('点击右上角x号关闭后');
+                                }
+                            }).show();
+                        });
+                        // disabledCloseBtn.trigger('click');
+                    </script>
+
+
+                    <!-- 禁止点击按钮自动关闭 -->
+                    <div class="btn btn-default disabled-btn">禁止点击按钮自动关闭</div>
+                    <div class="well bg-info">
+                        <p>通过传入<strong>isClickBtn:false</strong> 禁止点击按钮自动关闭</p>
+                        <p><strong>这个示例，只能通过onClickBtn回调手工关闭</strong></p>
+                    </div>
+                    <script>
+                        var disabledBtn=$('.disabled-btn').click(function(event) {
+                            SlsModal.init({
+                                isClickBtn:false,
+                                body:'这个框，你点击按钮不会自动关闭了，只能手工在onClickBtn回调中手工关闭。',
+                                onClickBtn:function(el,index){
+                                    console.log(index);
+                                    console.log('点击按钮关闭前');
+                                    //关闭，你可以在这前后处理你的逻辑
+                                    this.close();
+                                    console.log('点击按钮关闭后');
+                                }
+                            }).show();
+                        });
+                        // disabledBtn.trigger('click');
+                    </script>
+
+
+                    <!-- 禁止点击背景自动关闭 -->
+                    <div class="btn btn-default disabled-bg">禁止点击背景自动关闭</div>
+                    <div class="well bg-info">
+                        <p>通过传入<strong>isClickBg:false</strong> 禁止点击背景自动关闭</p>
+                        <p><strong>这个示例，只能通过onClickBg回调手工关闭</strong></p>
+                    </div>
+                    <script>
+                        var disabledBtn=$('.disabled-bg').click(function(event) {
+                            SlsModal.init({
+                                isClickBg:false,
+                                body:'这个框，你点击背景遮罩不会自动关闭了，只能手工在onClickBg回调中手工关闭。',
+                                onClickBg:function(el){
+                                    console.log(el);
+                                    console.log('点击背景关闭前');
+                                    //关闭，你可以在这前后处理你的逻辑
+                                    this.close();
+                                    console.log('点击背景关闭后');
+                                }
+                            }).show();
+                        });
+                        // disabledBtn.trigger('click');
+                    </script>
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

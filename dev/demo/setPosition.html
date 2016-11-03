@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <link rel='import' href='../components/includes/header.html?__inline'>
+        <link rel='import' href='../components/includes/footer.html?__inline'>
+        <title>SlsModal-jQuery弹框插件的简单使用-自定义位置</title>
+    </head>
+    <body>
+        <!-- 在垂直居中的基础上向上偏移100px -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="btn btn-default modal-offset-top">在垂直居中的基础上向上偏移100px</div>
+                    <div class="well bg-info">
+                        <p><strong>通过配置offsetTop:100;使弹框向上偏移100px</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('.modal-offset-top').click(function(event) {
+                SlsModal.init({
+                    offsetTop:100,
+                    body:'<strong>这个是通过配置offsetTop:100;使弹框向上偏移100px</strong>'
+                }).show();
+            });
+        </script>
+
+        
+        <!-- 固定距离顶部60px -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="btn btn-default modal-fixed-top">固定距离顶部60px</div>
+                    <div class="well bg-info">
+                        <p><strong>通过配置top:60,让固定距离顶部60px</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('.modal-fixed-top').click(function(event) {
+                SlsModal.init({
+                    top:60,
+                    body:'<strong>这个是固定距离顶部60px</strong>'
+                }).show();
+            });
+        </script>
+
+
+
+        <!-- 固定顶部距离优先级高于向上偏移 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="btn btn-default modal-fixed-gt-offset-top">固定顶部距离优先级高于向上偏移</div>
+                    <div class="well bg-info">
+                        <p><strong>这个是既设置了向上偏移，又设置了固定顶部距离，最终以固定距离为准。</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('.modal-fixed-gt-offset-top').click(function(event) {
+                SlsModal.init({
+                    top:60,
+                    offsetTop:100,
+                    body:'<strong>这个是既设置了向上偏移100px，又设置了固定顶部距离60px，最终以固定距离为准。</strong>'
+                }).show();
+            });
+        </script>
+    </body>
+</html>
