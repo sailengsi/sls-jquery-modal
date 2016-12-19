@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="red-translucent" />
+<meta name="apple-mobile-web-app-title" content="" /> 
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+   
+        <title>SlsModal-jQuery弹框插件的简单使用</title>
+    
+    <link rel="stylesheet" href="https://www.sailengsi.com/Public/common/other/bs/css/bootstrap.min.css" />
+    <style>
+	.callback{
+        color: red;
+        font-size: 20px;
+    }
+    strong{
+        font-size: 18px;
+        color: red;
+    }
+</style>
+</head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="btn btn-default btn-modal">默认调用</div>
+                    <div class="well bg-info">
+                        <p>这是默认调用，不传任何参数的情况。</p>
+                        <p>点击右上角x号和点击背景以及点击下面两个按钮都会关闭</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<script src="https://www.sailengsi.com/Public/common/other/jq/jquery.min.js"></script>
+<script src="../static/js/jquery.sls-modal.js"></script>
+<script>
+            $('.btn-modal').click(function(event) {
+                SlsModal.init().show();
+            });
+        </script>
+</body>
+</html>

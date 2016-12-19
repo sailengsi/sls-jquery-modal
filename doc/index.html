@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sls-jquery-modal-doc</title>
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+</head>
+<body>
+<div class="nav">
+    <div class="logo">
+        
+            sls-jquery-modal-doc
+        
+    </div>
+<ul><li><a href="index.html">首页</a></li></ul></div>
+
+
+<div class="forkgithub"><a target="_blank" href="https://github.com/sailengsi/sls-jquery-modal"></a></div>
+
+<div class="warpper">
+
+    <div class="page-toc">
+        <ul><li><a href="#t0简介">简介</a><ul><li><a href="#t1使用说明">使用说明</a></li><li><a href="#t2npm安装">npm安装</a></li><li><a href="#t3git安装">git安装</a></li><li><a href="#t4demo说明">demo说明</a></li></ul></li><li><a href="#t5全局对象SlsModal">全局对象SlsModal</a><ul><li><a href="#t6init(options)">init(options)</a><ul><li><a href="#t7通用回调">通用回调</a></li><li><a href="#t8isClickClose属性">isClickClose属性</a></li><li><a href="#t9onClickClose回调">onClickClose回调</a></li><li><a href="#t10isClickBtn属性">isClickBtn属性</a></li><li><a href="#t11onClickBtn回调">onClickBtn回调</a></li><li><a href="#t12isClickBg属性">isClickBg属性</a></li><li><a href="#t13onClickBg回调">onClickBg回调</a></li><li><a href="#t14isAutoClose属性">isAutoClose属性</a></li><li><a href="#t15isShowClose属性">isShowClose属性</a></li><li><a href="#t16header属性">header属性</a></li><li><a href="#t17body属性">body属性</a></li><li><a href="#t18footer属性">footer属性</a></li><li><a href="#t19btns属性">btns属性</a></li><li><a href="#t20footer&btns优先级">footer&btns优先级</a></li><li><a href="#t21width属性">width属性</a></li><li><a href="#t22offsetTop属性">offsetTop属性</a></li><li><a href="#t23top属性">top属性</a></li><li><a href="#t24offsetTop&top优先级">offsetTop&top优先级</a></li></ul></li><li><a href="#t25show()">show()</a></li><li><a href="#t26close()">close()</a></li></ul></li><li><a href="#t27致谢">致谢</a></li></ul>
+    </div>
+    
+    <div class="content markdown-body">
+        <h1 id="t0&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB; <a href="#t0&#x7B80;&#x4ECB;"> # </a></h1>
+<p>&#x4F5C;&#x8005;&#xFF1A;&#x8D5B;&#x51B7;&#x601D;</p>
+<p>&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#xFF1A;sailengsi.com</p>
+<p>github&#xFF1A;github.com/sailengsi</p>
+<p>demo&#x6F14;&#x793A;&#x5730;&#x5740;&#xFF1A;demo.sailengsi.com/sls-jquery-modal/release</p>
+<p>&#x6B22;&#x8FCE;&#x60A8;&#x67E5;&#x770B;&#x8FD9;&#x6B3E;&#x5F39;&#x6846;&#x63D2;&#x4EF6;&#x6587;&#x6863;&#xFF0C;&#x5982;&#x6709;&#x53D1;&#x73B0;&#x4E0D;&#x5BF9;&#x4E4B;&#x5904;&#x6216;&#x6709;&#x4EC0;&#x4E48;&#x5EFA;&#x8BAE;&#xFF0C;&#x53EF;&#x5230; github.com/sailengsi/sls-jquery-modal/issues &#x63D0;&#x51FA;&#x3002;</p>
+<h2 id="t1&#x4F7F;&#x7528;&#x8BF4;&#x660E;">&#x4F7F;&#x7528;&#x8BF4;&#x660E; <a href="#t1&#x4F7F;&#x7528;&#x8BF4;&#x660E;"> # </a></h2>
+<p>&#x6B64;&#x63D2;&#x4EF6;&#x57FA;&#x4E8E;jquery&#xFF0C;&#x4F7F;&#x7528;&#x672C;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;&#x524D;&#xFF0C;&#x8BF7;&#x52A1;&#x5FC5;&#x786E;&#x4FDD;&#x4F60;&#x5DF2;&#x7ECF;&#x5F15;&#x5165;jquery&#x3002;</p>
+<h2 id="t2npm&#x5B89;&#x88C5;">npm&#x5B89;&#x88C5; <a href="#t2npm&#x5B89;&#x88C5;"> # </a></h2>
+<pre><code>npm install sls-jquery-modal
+</code></pre><h2 id="t3git&#x5B89;&#x88C5;">git&#x5B89;&#x88C5; <a href="#t3git&#x5B89;&#x88C5;"> # </a></h2>
+<pre><code>git clone git@github.com:sailengsi/sls-jquery-modal.git
+</code></pre><h2 id="t4demo&#x8BF4;&#x660E;">demo&#x8BF4;&#x660E; <a href="#t4demo&#x8BF4;&#x660E;"> # </a></h2>
+<p>&#x6B64;&#x9879;&#x76EE;&#x662F;&#x91C7;&#x7528;fis&#x7F16;&#x5199;&#xFF0C;fis&#x6587;&#x6863;&#xFF1A;fis.baidu.com</p>
+<p>&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>- sls-jquery-modal      &#x9879;&#x76EE;&#x76EE;&#x5F55;
+    - dev                &#x6B64;&#x76EE;&#x5F55;&#x662F;fis&#x5F00;&#x53D1;&#x6E90;&#x7801;&#xFF0C;&#x4E0D;&#x53EF;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x76F4;&#x63A5;&#x8FD0;&#x884C;
+</code></pre><p>&#x9996;&#x5148;&#xFF0C;&#x8FDB;&#x5165;dev&#x76EE;&#x5F55;</p>
+<pre><code>- npm install
+- npm run build &#x8FD9;&#x4E00;&#x6B65;&#x4F1A;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E2D;&#x521B;&#x5EFA;release&#x76EE;&#x5F55;&#xFF0C;&#x7531;dev&#x76EE;&#x5F55;&#x7F16;&#x8BD1;&#x800C;&#x6210;
+- npm start
+</code></pre><p>npm start &#x4E4B;&#x540E;&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x6253;&#x5F00;&#xFF0C;&#x542F;&#x52A8;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#xFF0C;&#x6B64;&#x65F6;&#x6D4F;&#x89C8;&#x5668;&#x8BBF;&#x95EE;&#x7684;&#x662F;release&#x76EE;&#x5F55;&#x3002;</p>
+<h1 id="t5&#x5168;&#x5C40;&#x5BF9;&#x8C61;SlsModal">&#x5168;&#x5C40;&#x5BF9;&#x8C61;SlsModal <a href="#t5&#x5168;&#x5C40;&#x5BF9;&#x8C61;SlsModal"> # </a></h1>
+<p>&#x63D2;&#x4EF6;&#x66B4;&#x9732;&#x7ED9;&#x5916;&#x90E8;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;SlsModal&#x3002;</p>
+<p>&#x7B80;&#x5355;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>SlsModal.init().show();
+</code></pre><h2 id="t6init(options)">init(options) <a href="#t6init(options)"> # </a></h2>
+<p>&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x7684;init&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#x4E00;&#x4E9B;&#x81EA;&#x5B9A;&#x4E49;&#x53C2;&#x6570;&#xFF0C;&#x5177;&#x4F53;&#x53C2;&#x6570;&#x8BF7;&#x770B;&#x4E0B;&#x9762;&#x4ECB;&#x7ECD;</p>
+<h3 id="t7&#x901A;&#x7528;&#x56DE;&#x8C03;">&#x901A;&#x7528;&#x56DE;&#x8C03; <a href="#t7&#x901A;&#x7528;&#x56DE;&#x8C03;"> # </a></h3>
+<p>&#x4EE5;&#x4E0B;&#x56DB;&#x4E2A;&#x56DE;&#x8C03;&#xFF0C;&#x5206;&#x522B;&#x5728;&#x5F39;&#x6846; &#x663E;&#x793A;/&#x5173;&#x95ED; &#x524D;&#x540E;&#x8C03;&#x7528;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x662F;&#x624B;&#x52A8;&#x5173;&#x95ED;&#x5F39;&#x6846;&#xFF0C;&#x5173;&#x95ED;&#x524D;&#x540E;&#x7684;&#x56DE;&#x8C03;&#x5C06;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x56DB;&#x4E2A;&#x56DE;&#x8C03;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5747;&#x6307;&#x5411;&#x5F53;&#x524D;&#x5F39;&#x6846;&#x5BF9;&#x8C61;SlsModal</p>
+<pre><code>onShowBefore: function() {},     //&#x663E;&#x793A;&#x6846;&#x4E4B;&#x524D;&#x7684;&#x56DE;&#x8C03;
+onShowAfter: function() {},     //&#x663E;&#x793A;&#x6846;&#x4E4B;&#x540E;&#x7684;&#x56DE;&#x8C03;
+onCloseBefore: function() {},     //&#x5173;&#x95ED;&#x6846;&#x4E4B;&#x524D;&#x7684;&#x56DE;&#x8C03;
+onCloseAfter: function() {},    //&#x5173;&#x95ED;&#x6846;&#x4E4B;&#x540E;&#x7684;&#x56DE;&#x8C03;
+</code></pre><pre><code>SlsModal.init({
+    //&#x663E;&#x793A;&#x6846;&#x4E4B;&#x524D;&#x7684;&#x56DE;&#x8C03;&#xFF0C;this&#x6307;&#x5411;&#x5F53;&#x524D;&#x5C42;&#x7684;DOM&#x5BF9;&#x8C61;
+    onShowBefore: function() {
+        console.log(this);//SlsModal&#x5BF9;&#x8C61;
+        console.log(&apos;&#x6846;&#x663E;&#x793A;&#x524D;&#x8C03;&#x7528;&apos;);
+    },
+    //&#x663E;&#x793A;&#x6846;&#x4E4B;&#x540E;&#x7684;&#x56DE;&#x8C03;&#xFF0C;this&#x6307;&#x5411;&#x5F53;&#x524D;&#x5C42;&#x7684;DOM&#x5BF9;&#x8C61;
+    onShowAfter: function() {
+        console.log(this);//SlsModal&#x5BF9;&#x8C61;
+        console.log(&apos;&#x6846;&#x663E;&#x793A;&#x540E;&#x8C03;&#x7528;&apos;);
+        $(&quot;.callback&quot;).html(&apos;&#x6846;&#x663E;&#x793A;&#x4E86;&#x3002;&apos;);
+    }, 
+
+    //&#x5173;&#x95ED;&#x6846;&#x4E4B;&#x524D;&#x7684;&#x56DE;&#x8C03;
+    onCloseBefore: function(el,index) {
+        console.log(el);//&#x5F53;&#x524D;&#x70B9;&#x51FB;&#x7684;dom&#x5143;&#x7D20;&#x5BF9;&#x8C61;
+        console.log(index);//&#x5982;&#x679C;&#x70B9;&#x51FB;&#x7684;&#x662F;&#x6309;&#x94AE;&#xFF0C;&#x4FBF;&#x662F;&#x6309;&#x94AE;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5426;&#x5219;&#x6CA1;&#x6709;&#x503C;
+        console.log(this);//SlsModal&#x5BF9;&#x8C61;
+        console.log(&apos;&#x6846;&#x5173;&#x95ED;&#x524D;&#x8C03;&#x7528;&apos;);
+    }, 
+    //&#x5173;&#x95ED;&#x6846;&#x4E4B;&#x540E;&#x7684;&#x56DE;&#x8C03;
+    onCloseAfter: function(el,index) {
+        console.log(el);//&#x5F53;&#x524D;&#x70B9;&#x51FB;&#x7684;dom&#x5143;&#x7D20;&#x5BF9;&#x8C61;
+        console.log(index);//&#x5982;&#x679C;&#x70B9;&#x51FB;&#x7684;&#x662F;&#x6309;&#x94AE;&#xFF0C;&#x4FBF;&#x662F;&#x6309;&#x94AE;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5426;&#x5219;&#x6CA1;&#x6709;&#x503C;
+        console.log(this);//SlsModal&#x5BF9;&#x8C61;
+        console.log(&apos;&#x6846;&#x5173;&#x95ED;&#x540E;&#x8C03;&#x7528;&apos;);
+        $(&quot;.callback&quot;).html(&apos;&#x6846;&#x5173;&#x95ED;&#x4E86;&#x3002;&apos;);
+    }, 
+}).show();
+</code></pre><h3 id="t8isClickClose&#x5C5E;&#x6027;">isClickClose&#x5C5E;&#x6027; <a href="#t8isClickClose&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x9ED8;&#x8BA4;&#x4E3A;false&#xFF0C;&#x8BBE;&#x4E3A;true&#xFF0C;&#x70B9;&#x51FB;&#x53F3;&#x4E0A;&#x89D2;x&#x53F7;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x3002;</p>
+<h3 id="t9onClickClose&#x56DE;&#x8C03;">onClickClose&#x56DE;&#x8C03; <a href="#t9onClickClose&#x56DE;&#x8C03;"> # </a></h3>
+<p>&#x6B64;&#x56DE;&#x8C03;&#x5FC5;&#x987B;&#x5728;isClickClose&#x4E3A;true&#x65F6;&#x624D;&#x6709;&#x6548;&#xFF0C;&#x56DE;&#x8C03;&#x4E0A;&#x4E0B;&#x6587;&#x6307;&#x5411;&#x5F53;&#x524D;&#x5F39;&#x6846;SlsModal&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x5F53;&#x524D;&#x70B9;&#x51FB;&#x7684;dom&#x5143;&#x7D20;&#x5BF9;&#x8C61;</p>
+<pre><code>SlsModal.init({
+    isClickClose:false,
+    body:&apos;&#x8FD9;&#x4E2A;&#x6846;&#xFF0C;&#x4F60;&#x70B9;&#x51FB;&#x53F3;&#x4E0A;&#x89D2;x&#x53F7;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x4E86;&#xFF0C;&#x53EA;&#x80FD;&#x624B;&#x5DE5;&#x5728;onClickClose&#x56DE;&#x8C03;&#x4E2D;&#x624B;&#x5DE5;&#x5173;&#x95ED;&#x3002;&apos;,
+    onClickClose:function(el){
+        console.log(this);//=&gt;&#x5F53;&#x524D;&#x5F39;&#x6846;&#x5BF9;&#x8C61;SlsModal
+        console.log(el);//=&gt;&#x5F53;&#x524D;&#x70B9;&#x51FB;&#x7684;&#x6309;&#x94AE;dom&#x5143;&#x7D20;&#x5BF9;&#x8C61;
+        console.log(&apos;&#x70B9;&#x51FB;&#x53F3;&#x4E0A;&#x89D2;x&#x53F7;&#x5173;&#x95ED;&#x524D;&apos;);
+        //&#x5173;&#x95ED;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x524D;&#x540E;&#x5904;&#x7406;&#x4F60;&#x7684;&#x903B;&#x8F91;
+        this.close();
+        console.log(&apos;&#x70B9;&#x51FB;&#x53F3;&#x4E0A;&#x89D2;x&#x53F7;&#x5173;&#x95ED;&#x540E;&apos;);
+    }
+}).show();
+</code></pre><h3 id="t10isClickBtn&#x5C5E;&#x6027;">isClickBtn&#x5C5E;&#x6027; <a href="#t10isClickBtn&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x9ED8;&#x8BA4;&#x4E3A;false&#xFF0C;&#x8BBE;&#x4E3A;true&#xFF0C;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x3002;</p>
+<h3 id="t11onClickBtn&#x56DE;&#x8C03;">onClickBtn&#x56DE;&#x8C03; <a href="#t11onClickBtn&#x56DE;&#x8C03;"> # </a></h3>
+<p>&#x6B64;&#x56DE;&#x8C03;&#x5FC5;&#x987B;&#x5728;isClickBtn&#x4E3A;true&#x65F6;&#x624D;&#x6709;&#x6548;&#xFF0C;&#x56DE;&#x8C03;&#x4E0A;&#x4E0B;&#x6587;&#x6307;&#x5411;&#x5F53;&#x524D;&#x5F39;&#x6846;SlsModal&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<ul>
+<li>&#x5F53;&#x524D;&#x70B9;&#x51FB;&#x7684;dom&#x5143;&#x7D20;&#x5BF9;&#x8C61;</li>
+<li>&#x5F53;&#x524D;&#x70B9;&#x51FB;&#x7684;&#x6309;&#x94AE;&#x7D22;&#x5F15;</li>
+</ul>
+<pre><code>SlsModal.init({
+    isClickBtn:false,
+    body:&apos;&#x8FD9;&#x4E2A;&#x6846;&#xFF0C;&#x4F60;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x4E86;&#xFF0C;&#x53EA;&#x80FD;&#x624B;&#x5DE5;&#x5728;onClickBtn&#x56DE;&#x8C03;&#x4E2D;&#x624B;&#x5DE5;&#x5173;&#x95ED;&#x3002;&apos;,
+    onClickBtn:function(el,index){
+        console.log(this);//=&gt;&#x5F53;&#x524D;&#x5F39;&#x6846;&#x5BF9;&#x8C61;SlsModal
+        console.log(el);//=&gt;&#x5F53;&#x524D;&#x70B9;&#x51FB;&#x7684;&#x6309;&#x94AE;dom&#x5143;&#x7D20;&#x5BF9;&#x8C61;
+        console.log(index);//&#x5F53;&#x524D;&#x70B9;&#x51FB;&#x7684;&#x6309;&#x94AE;&#x7D22;&#x5F15;
+        console.log(&apos;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x5173;&#x95ED;&#x524D;&apos;);
+        //&#x5173;&#x95ED;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x524D;&#x540E;&#x5904;&#x7406;&#x4F60;&#x7684;&#x903B;&#x8F91;
+        this.close();
+        console.log(&apos;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x5173;&#x95ED;&#x540E;&apos;);
+    }
+}).show();
+</code></pre><h3 id="t12isClickBg&#x5C5E;&#x6027;">isClickBg&#x5C5E;&#x6027; <a href="#t12isClickBg&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x9ED8;&#x8BA4;&#x4E3A;false&#xFF0C;&#x8BBE;&#x4E3A;true&#xFF0C;&#x70B9;&#x80CC;&#x666F;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x3002;</p>
+<h3 id="t13onClickBg&#x56DE;&#x8C03;">onClickBg&#x56DE;&#x8C03; <a href="#t13onClickBg&#x56DE;&#x8C03;"> # </a></h3>
+<p>&#x6B64;&#x56DE;&#x8C03;&#x5FC5;&#x987B;&#x5728;isClickBg&#x4E3A;true&#x65F6;&#x624D;&#x6709;&#x6548;&#xFF0C;&#x56DE;&#x8C03;&#x4E0A;&#x4E0B;&#x6587;&#x6307;&#x5411;&#x5F53;&#x524D;&#x5F39;&#x6846;SlsModal&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x5F53;&#x524D;&#x70B9;&#x51FB;&#x7684;dom&#x5143;&#x7D20;&#x5BF9;&#x8C61;</p>
+<pre><code>SlsModal.init({
+    isClickBg:false,
+    body:&apos;&#x8FD9;&#x4E2A;&#x6846;&#xFF0C;&#x4F60;&#x70B9;&#x51FB;&#x80CC;&#x666F;&#x906E;&#x7F69;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#x4E86;&#xFF0C;&#x53EA;&#x80FD;&#x624B;&#x5DE5;&#x5728;onClickBg&#x56DE;&#x8C03;&#x4E2D;&#x624B;&#x5DE5;&#x5173;&#x95ED;&#x3002;&apos;,
+    onClickBg:function(el){
+        console.log(this);//=&gt;&#x5F53;&#x524D;&#x5F39;&#x6846;&#x5BF9;&#x8C61;SlsModal
+        console.log(el);//=&gt;&#x5F53;&#x524D;&#x70B9;&#x51FB;&#x7684;&#x5143;&#x7D20;
+        console.log(&apos;&#x70B9;&#x51FB;&#x80CC;&#x666F;&#x5173;&#x95ED;&#x524D;&apos;);
+        //&#x5173;&#x95ED;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x524D;&#x540E;&#x5904;&#x7406;&#x4F60;&#x7684;&#x903B;&#x8F91;
+        this.close();
+        console.log(&apos;&#x70B9;&#x51FB;&#x80CC;&#x666F;&#x5173;&#x95ED;&#x540E;&apos;);
+    }
+}).show();
+</code></pre><h3 id="t14isAutoClose&#x5C5E;&#x6027;">isAutoClose&#x5C5E;&#x6027; <a href="#t14isAutoClose&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x662F;&#x5426;&#x5F00;&#x542F;&#x81EA;&#x52A8;&#x5173;&#x95ED;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;true:&#x5F00;&#x542F;&#x3002;&#x8BBE;&#x4E3A;false&#x65F6;&#xFF0C;&#x6CA1;&#x6709;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x5982;&#x679C;&#x518D;&#x60F3;&#x5173;&#x95ED;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x81EA;&#x5DF1;&#x7ED1;&#x5B9A;&#x4E8B;&#x4EF6;&#x5173;&#x95ED;&#x3002;</p>
+<pre><code>SlsModal.init({
+    isAutoClose:false,
+    body:&apos;&#x8FD9;&#x4E2A;&#x6846;&#xFF0C;&#x4F60;&#x53EA;&#x80FD;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x624B;&#x5DE5;&#x7ED1;&#x5B9A;&#x5173;&#x95ED;&#x4E8B;&#x4EF6;,&#x70B9;&#x51FB;&#x53F3;&#x4E0A;&#x89D2;x&#x53F7;&#x5173;&#x95ED;&#x4E86;&#x3002;&apos;
+}).show();
+
+//&#x624B;&#x5DE5;&#x70B9;&#x51FB;&#x53F3;&#x4E0A;&#x89D2;&#x5173;&#x95ED;
+$(&quot;body&quot;).on(&apos;click&apos;,&apos;.sls-modal-close&apos;,function(){
+    SlsModal.close();
+});
+</code></pre><h3 id="t15isShowClose&#x5C5E;&#x6027;">isShowClose&#x5C5E;&#x6027; <a href="#t15isShowClose&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x662F;&#x5426;&#x663E;&#x793A;&#x53F3;&#x4E0A;&#x89D2;&#x7684;x&#x53F7;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;true:&#x663E;&#x793A;&#x3002;</p>
+<pre><code>SlsModal.init({
+    isShowClose:false
+}).show();
+</code></pre><h3 id="t16header&#x5C5E;&#x6027;">header&#x5C5E;&#x6027; <a href="#t16header&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x5F39;&#x6846;&#x6807;&#x9898;&#x5185;&#x5BB9;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x663E;&#x793A;&#x6807;&#x9898;&#xFF0C;&#x8BBE;&#x7F6E;&#x6210;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8005;false&#x5373;&#x53EF;&#x3002;</p>
+<pre><code>SlsModal.init({
+    header:false,
+}).show();
+</code></pre><h3 id="t17body&#x5C5E;&#x6027;">body&#x5C5E;&#x6027; <a href="#t17body&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x5F39;&#x6846;&#x5185;&#x5BB9;&#x3002;&#x4E0D;&#x53EF;&#x4E0D;&#x7A7A;&#x3002;</p>
+<pre><code>SlsModal.init({
+    header:&apos;&#x81EA;&#x5B9A;&#x4E49;&#x6807;&#x9898;&apos;,
+    body:&apos;&#x81EA;&#x5B9A;&#x4E49;&#x5185;&#x5BB9;&apos;
+}).show();
+</code></pre><h3 id="t18footer&#x5C5E;&#x6027;">footer&#x5C5E;&#x6027; <a href="#t18footer&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x5F39;&#x6846;&#x5E95;&#x90E8;&#x5185;&#x5BB9;&#x3002;</p>
+<pre><code>SlsModal.init({
+    footer:&apos;&#x81EA;&#x5B9A;&#x4E49;&#x5E95;&#x90E8;&#x5185;&#x5BB9;&apos;
+}).show();
+</code></pre><h3 id="t19btns&#x5C5E;&#x6027;">btns&#x5C5E;&#x6027; <a href="#t19btns&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x6B64;&#x5C5E;&#x6027;&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x6309;&#x94AE;&#xFF0C;&#x503C;&#x7C7B;&#x578B;&#x4E3A;&#x6570;&#x7EC4;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x4E3A;&#x5BF9;&#x8C61;&#xFF0C;&#x5BF9;&#x8C61;&#x4E2D;&#x542B;&#x6709;&#x4E09;&#x4E2A;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code>- text:&apos;&#x6309;&#x94AE;&#x6587;&#x672C;&#x5185;&#x5BB9;&apos;,            //&#x5FC5;&#x9009;
+- type: &apos;&#x6309;&#x94AE;&#x7C7B;&#x578B;&apos;              //&#x53EF;&#x9009;,&#x9ED8;&#x8BA4;&#x4E3A;default&#xFF0C;&#x63D2;&#x4EF6;&#x63D0;&#x4F9B;&#x4E94;&#x79CD;&#x7C7B;&#x578B;:default,info,warning,danger,success
+- className:&apos;&#x81EA;&#x5B9A;&#x4E49;&#x7684;class&apos;      //&#x53EF;&#x9009;
+</code></pre><pre><code>SlsModal.init({
+    btns:[{
+        text:&apos;&#x9ED8;&#x8BA4;&apos;,
+    },{
+        text:&apos;&#x4FE1;&#x606F;&apos;,
+        type:&apos;info&apos;
+    },{
+        text:&apos;&#x8B66;&#x544A;&apos;,
+        type:&apos;warning&apos;
+    },{
+        text:&apos;&#x5220;&#x9664;&apos;,
+        type:&apos;danger&apos;
+    },{
+        text:&apos;&#x6210;&#x529F;&apos;,
+        type:&apos;success&apos;
+    }]
+}).show();
+</code></pre><h3 id="t20footer&amp;btns&#x4F18;&#x5148;&#x7EA7;">footer&amp;btns&#x4F18;&#x5148;&#x7EA7; <a href="#t20footer&amp;btns&#x4F18;&#x5148;&#x7EA7;"> # </a></h3>
+<p>&#x63D2;&#x4EF6;&#x5185;&#x90E8;&#x5148;&#x627E;footer&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x679C;footer&#x5C5E;&#x6027;&#x627E;&#x4E0D;&#x5230;&#xFF0C;&#x518D;&#x627E;btns&#x6309;&#x94AE;&#xFF0C;&#x6240;&#x4EE5;footer&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;btns&#x6309;&#x94AE;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;footer&#x4E3A;&#x7A7A;&#xFF0C;btns&#x4E3A;&#x4E24;&#x4E2A;&#x6309;&#x94AE;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4E24;&#x8005;&#x90FD;&#x4E0D;&#x8BBE;&#x7F6E;&#x7684;&#x8BDD;&#xFF0C;&#x9ED8;&#x8BA4;&#x663E;&#x793A;&#x6309;&#x94AE;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x60F3;&#x8981;&#x663E;&#x793A;&#x5E95;&#x90E8;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;btns&#x8BBE;&#x7F6E;&#x4E3A;false&#x5373;&#x53EF;&#x3002;</p>
+<h3 id="t21width&#x5C5E;&#x6027;">width&#x5C5E;&#x6027; <a href="#t21width&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x8BBE;&#x7F6E;&#x6846;&#x7684;&#x5BBD;&#x5EA6;&#xFF0C;&#x9ED8;&#x8BA4;&#x5BBD;&#x4E3A;420px&#x3002;&#x652F;&#x6301;&#x767E;&#x5206;&#x4E4B;&#x548C;&#x56FA;&#x5B9A;&#x5927;&#x5C0F;&#x4E24;&#x79CD;&#x7C7B;&#x578B;:</p>
+<pre><code>- width:&apos;600px&apos;        //&#x5BBD;&#x4E3A;600px&#x3002;
+- width: &apos;60%&apos;     //&#x5BBD;&#x4E3A;&#x767E;&#x5206;&#x4E4B;60%
+</code></pre><pre><code>SlsModal.init({
+    width:&apos;800px&apos;,
+    body:&apos;&lt;strong&gt;&#x8FD9;&#x4E2A;&#x5BBD;&#x5EA6;&#x662F;&#x56FA;&#x5B9A;800px&lt;/strong&gt;&apos;
+}).show();
+
+SlsModal.init({
+    width:&apos;30%&apos;,
+    body:&apos;&lt;strong&gt;&#x8FD9;&#x4E2A;&#x5BBD;&#x5EA6;&#x662F;&#x81EA;&#x9002;&#x5E94;50%&lt;/strong&gt;&apos;
+}).show();
+</code></pre><h3 id="t22offsetTop&#x5C5E;&#x6027;">offsetTop&#x5C5E;&#x6027; <a href="#t22offsetTop&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x5F39;&#x6846;&#x9ED8;&#x8BA4;&#x6C34;&#x5E73;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x3002;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x662F;&#x5728;&#x5782;&#x76F4;&#x5C45;&#x4E2D;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x5411;&#x4E0A;&#x7684;&#x504F;&#x79FB;&#x91CF;&#x3002;</p>
+<pre><code>SlsModal.init({
+    offsetTop:100,
+    body:&apos;&lt;strong&gt;&#x8FD9;&#x4E2A;&#x662F;&#x901A;&#x8FC7;&#x914D;&#x7F6E;offsetTop:100;&#x4F7F;&#x5F39;&#x6846;&#x5411;&#x4E0A;&#x504F;&#x79FB;100px&lt;/strong&gt;&apos;
+}).show();
+</code></pre><h3 id="t23top&#x5C5E;&#x6027;">top&#x5C5E;&#x6027; <a href="#t23top&#x5C5E;&#x6027;"> # </a></h3>
+<p>&#x5F39;&#x6846;&#x56FA;&#x5B9A;&#x8DDD;&#x79BB;&#x9876;&#x90E8;&#x7684;&#x8DDD;&#x79BB;&#x3002;</p>
+<pre><code>SlsModal.init({
+    top:60,
+    body:&apos;&lt;strong&gt;&#x8FD9;&#x4E2A;&#x662F;&#x56FA;&#x5B9A;&#x8DDD;&#x79BB;&#x9876;&#x90E8;60px&lt;/strong&gt;&apos;
+}).show();
+</code></pre><h3 id="t24offsetTop&amp;top&#x4F18;&#x5148;&#x7EA7;">offsetTop&amp;top&#x4F18;&#x5148;&#x7EA7; <a href="#t24offsetTop&#x22A4;&#x5148;&#x7EA7;"> # </a></h3>
+<p>top&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;offsetTop&#x3002;&#x5982;&#x679C;&#x4E24;&#x8005;&#x90FD;&#x8BBE;&#x7F6E;&#x4E86;&#xFF0C;&#x63D2;&#x4EF6;&#x6700;&#x7EC8;&#x4EE5;top&#x7684;&#x503C;&#x4E3A;&#x51C6;&#x3002;</p>
+<h2 id="t25show()">show() <a href="#t25show()"> # </a></h2>
+<p>&#x6B64;&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x663E;&#x793A;&#x5F39;&#x6846;&#xFF0C;&#x5FC5;&#x987B;&#x5728;init&#x65B9;&#x6CD5;&#x521D;&#x59CB;&#x5316;&#x540E;&#x624D;&#x53EF;&#x8C03;&#x7528;</p>
+<h2 id="t26close()">close() <a href="#t26close()"> # </a></h2>
+<p>&#x6B64;&#x65B9;&#x6CD5;&#x7528;&#x6765;&#x5173;&#x95ED;&#x5F39;&#x6846;</p>
+<h1 id="t27&#x81F4;&#x8C22;">&#x81F4;&#x8C22; <a href="#t27&#x81F4;&#x8C22;"> # </a></h1>
+<p>&#x611F;&#x8C22;&#x60A8;&#x817E;&#x51FA;&#x5B9D;&#x8D35;&#x7684;&#x65F6;&#x95F4;&#x6765;&#x67E5;&#x9605;&#x8FD9;&#x4EFD;&#x6587;&#x6863;&#xFF0C;&#x8C22;&#x8C22;&#xFF0C;</p>
+
+        <div class="copyright">Powered by <a href="https://github.com/jaywcjlove/idoc" target="_blank">idoc</a>. Dependence <a href="https://nodejs.org">Node.js</a> run.</div>
+    </div>
+    
+</div>
+
+
+</body>
+</html>
