@@ -1,6 +1,14 @@
-查看在线demo：[https://demo.sailengsi.com/sls-jquery-modal/src/release/](https://demo.sailengsi.com/sls-jquery-modal/src/release/ "在线演示")
+## 演示
 
-查看在线文档：[https://demo.sailengsi.com/sls-jquery-modal/doc/](https://demo.sailengsi.com/sls-jquery-modal/doc/ "查看在线文档")
+### GitHub：[https://sailengsi.github.io/sls-jquery-modal/src/release/](https://sailengsi.github.io/sls-jquery-modal/src/release/)
+### Gitee：[https://sailengsi.gitee.io/sls-jquery-modal/src/release/](https://sailengsi.gitee.io/sls-jquery-modal/src/release/)
+### Coding：[https://sailengsi.coding.me/sls-jquery-modal/src/release/](https://sailengsi.coding.me/sls-jquery-modal/src/release/)
+
+## 文档
+
+### GitHub：[https://sailengsi.github.io/sls-jquery-modal/docs/](https://sailengsi.github.io/sls-jquery-modal/docs/)
+### Gitee：[https://sailengsi.gitee.io/sls-jquery-modal/docs/](https://sailengsi.gitee.io/sls-jquery-modal/docs/)
+### Coding：[https://sailengsi.coding.me/sls-jquery-modal/docs/](https://sailengsi.coding.me/sls-jquery-modal/docs/)
 
 项目采用fis编写，fis官网地址：[http://fis.baidu.com/](http://fis.baidu.com/ "fis文档")   
 所以你需要按照以下步骤才能运行此项目
